@@ -1,1 +1,190 @@
 
+This project analyzes a used car sales dataset sourced from Kaggle to uncover patterns in vehicle sales, pricing, resale value, performance, fuel efficiency, and manufacturer performance.
+
+The analysis was designed from a business and decision-making perspective, with the goal of identifying the factors associated with stronger sales performance and understanding how different manufacturers, models, and vehicle types compare across key business metrics.
+
+The project uses Python, Pandas, NumPy, Matplotlib, and Seaborn for data preparation, exploratory data analysis, KPI development, statistical analysis, and visualization.
+
+🎯 Business Objectives
+The analysis focuses on answering questions such as:
+
+Which manufacturers generate the highest total sales?
+Which vehicle models are the best sellers?
+How do vehicle types compare in terms of sales, pricing, resale value, and efficiency?
+Do higher-priced vehicles necessarily achieve lower sales volumes?
+What is the relationship between horsepower and sales?
+Does fuel efficiency have an observable relationship with sales?
+Which vehicles provide the strongest horsepower relative to their price?
+Which models demonstrate strong 4-year resale value retention?
+What numerical variables show the strongest relationship with sales?
+🛠️ Tools & Technologies
+Python
+Pandas — data cleaning, transformation, aggregation, and analysis
+NumPy — numerical calculations
+Matplotlib — data visualization
+Seaborn — statistical visualization
+Jupyter Notebook
+Kaggle Dataset
+🧹 Data Cleaning & Preparation
+The dataset contains information including:
+
+Manufacturer
+Model
+Sales volume
+4-year resale value
+Vehicle type
+Price
+Engine size
+Horsepower
+Wheelbase
+Width
+Length
+Curb weight
+Fuel capacity
+Fuel efficiency
+Launch date
+The data preparation process included:
+
+Examining dataset dimensions and structure
+Reviewing data types and descriptive statistics
+Identifying missing values and calculating missing-value percentages
+Checking for duplicate records
+Standardizing column names using string transformations
+Identifying unique manufacturers and vehicle types
+Converting launch dates into proper datetime format
+Creating additional launch year and launch month features
+📊 KPI Development
+A KPI table was created to provide a high-level overview of the dataset and establish the core business metrics.
+
+Key KPIs include:
+
+Total Models
+Total Manufacturers
+Total Sales
+Average Vehicle Price
+Average 4-Year Resale Value
+Average Horsepower
+Average Fuel Efficiency
+Average Resale Retention
+These KPIs provide a concise snapshot of the overall vehicle market represented in the dataset.
+
+🏭 Manufacturer Performance Analysis
+Manufacturer-level analysis was performed using grouped aggregations to compare:
+
+Number of models
+Total sales
+Average price
+Average resale value
+Average horsepower
+Average fuel efficiency
+The analysis also identifies the top manufacturers by total sales and visualizes their performance using bar charts.
+
+This helps evaluate manufacturer-level market performance and identify leading players within the dataset.
+
+🚘 Best-Selling Models
+The project identifies the highest-selling vehicle models based on total sales volume.
+
+The analysis compares top-performing models across:
+
+Sales volume
+Manufacturer
+Price
+4-year resale value
+This provides a model-level view of which vehicles have achieved the strongest market demand.
+
+💰 Pricing vs. Sales Analysis
+One of the key business questions explored is:
+
+Do expensive vehicles actually sell less?
+
+A scatter plot and correlation analysis were used to examine the relationship between vehicle price and sales volume.
+
+This analysis helps assess whether pricing appears to be associated with sales performance and provides a foundation for further statistical or predictive modeling.
+
+♻️ Resale Value & Retention Analysis
+A resale retention metric was derived to evaluate how vehicle value is retained relative to its original sales/price measure.
+
+The analysis identifies models with stronger resale retention and compares vehicles based on:
+
+Original price
+4-year resale value
+Resale retention percentage
+This provides an additional perspective on vehicle value beyond initial sales performance.
+
+🚙 Vehicle Type Analysis
+Vehicles were grouped by type to compare:
+
+Number of models
+Total sales
+Average price
+Average resale value
+Average horsepower
+Average fuel efficiency
+This allows comparison of market performance across different vehicle categories and helps identify which vehicle types have stronger overall sales performance.
+
+🔥 Performance vs. Price
+To evaluate value for money, a custom metric was created:
+
+Horsepower per $1,000
+
+This metric compares vehicle performance against price and identifies vehicles that provide relatively high horsepower for their cost.
+
+The analysis ranks the top-performing models using this derived metric while also considering their sales performance.
+
+📈 Correlation & Relationship Analysis
+Correlation analysis was performed across numerical variables including:
+
+Sales
+Price
+4-year resale value
+Engine size
+Horsepower
+Wheelbase
+Width
+Length
+Curb weight
+Fuel capacity
+Fuel efficiency
+A correlation heatmap was created to identify relationships between vehicle characteristics and sales performance.
+
+Additional scatter plots were used to investigate:
+
+Price vs. Sales
+Horsepower vs. Sales
+Fuel Efficiency vs. Sales
+💡 Key Analytical Skills Demonstrated
+This project demonstrates practical experience with:
+
+Data cleaning and preprocessing
+Missing-value analysis
+Duplicate detection
+Data type conversion
+Feature engineering
+GroupBy and aggregation
+KPI development
+Ranking and segmentation
+Correlation analysis
+Business-oriented exploratory data analysis
+Derived metrics
+Data visualization
+Translating raw data into business questions and insights
+🤖 Machine Learning — Next Phase
+A machine learning component will be added as the next phase of the project.
+
+The ML stage will build on the exploratory analysis by applying predictive techniques to investigate whether vehicle characteristics can be used to predict sales performance or other relevant business outcomes.
+
+The ML section will include:
+
+Feature selection
+Train/test split
+Model development
+Model evaluation
+Performance comparison
+Feature importance / model interpretation
+Business interpretation of predictions
+This creates an end-to-end workflow:
+
+Raw Data → Data Cleaning → EDA → KPI Analysis → Business Insights → Feature Engineering → Machine Learning → Model Evaluation
+
+📌 Project Outcome
+The project transforms a raw used-car dataset into a structured analytical workflow covering data quality assessment, KPI reporting, manufacturer and model performance, pricing analysis, resale value, vehicle segmentation, and relationship analysis.

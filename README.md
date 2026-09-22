@@ -52,7 +52,7 @@ Correlation heatmap for numerical variables.
 These visualizations helped convert raw customer data into clear trends, patterns, and business insights.
 
 Statistical Analysis :
-Chi-Square Test
+Chi-Square Test :
 Analyzed the relationship between gender and car ownership.
 Chi-square statistic: 153,486.31
 p-value: < 0.001

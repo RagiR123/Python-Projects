@@ -13,7 +13,7 @@ Analyze income distribution and identify potential outliers.
 Apply statistical tests to validate relationships and differences in the data.
 Generate insights that can support credit risk and customer analysis.
 
-Data Preparation & Cleaning
+Data Preparation & Cleaning :
 Loaded and explored the Application Record and Credit Record datasets.
 Examined dataset dimensions, data types, statistical summaries, and data structure.
 Identified missing values and duplicate records.

@@ -1,1 +1,257 @@
 top 50 spotify
+
+Project Overview
+
+The primary objective of this project is to understand the patterns and relationships within a music dataset and communicate those findings through structured analysis and visual storytelling.
+
+The analysis investigates questions such as:
+
+What are the most popular songs and artists?
+
+Which genres appear most frequently in the dataset?
+
+Which genres have the highest average and median popularity?
+
+How are popularity, danceability, energy, and valence distributed?
+
+Which audio features have the strongest relationship with popularity?
+
+How do audio characteristics differ across genres?
+
+Are highly danceable or energetic songs necessarily more popular?
+
+What characteristics are associated with highly popular songs?
+
+Can audio characteristics be used to classify songs into broader genre categories?
+
+🧹 Data Cleaning & Preparation
+
+A structured data-preparation workflow was applied before performing analysis.
+
+Key steps included:
+
+Inspecting dataset structure using shape, info(), and describe()
+
+Identifying and handling missing values
+
+Detecting and removing duplicate records
+
+Standardizing column names
+
+Removed leading/trailing spaces
+
+Converted names to lowercase
+
+Replaced spaces with underscores
+
+Cleaned inconsistent formatting
+
+Selecting relevant numerical features for statistical analysis
+
+Creating derived popularity categories such as Low, Medium, High, and Very High
+
+Standardizing inconsistent genre labels
+
+Grouping detailed genre values into broader analytical categories
+
+This preprocessing ensured that the dataset was more consistent and suitable for both exploratory analysis and machine learning.
+
+🎼 Genre Cleaning & Standardization
+
+Because the original dataset contained multiple variations of genre labels, a custom genre-cleaning function was used to create broader categories:
+
+Pop
+
+Hip-Hop
+
+Latin
+
+Country
+
+Other
+
+For the classification task, records categorized as Other were excluded so that the model could focus on the major identifiable genre groups.
+
+🔎 Exploratory Data Analysis
+
+The project applies univariate, bivariate, and grouped analysis to identify patterns and relationships across the dataset.
+
+Key analyses
+
+Top 10 most popular songs
+
+Most frequently appearing artists
+
+Most common genres
+
+Average and median popularity by genre
+
+Popularity distribution
+
+Danceability distribution
+
+Energy distribution
+
+Audio-feature correlation matrix
+
+Individual feature correlations with popularity
+
+Danceability vs. popularity
+
+Energy vs. popularity
+
+Valence vs. danceability
+
+Audio-feature comparisons across genres
+
+Most popular song within each genre
+
+Identification of highly danceable and highly popular songs
+
+Comparison of audio characteristics among genre groups
+
+These analyses help translate raw records into interpretable patterns and business-style insights.
+
+📈 Data Visualization & Dashboard
+
+Visual storytelling was used to make analytical findings easier to interpret and communicate.
+
+Visualizations created
+
+Bar charts
+
+Horizontal bar charts
+
+Histograms with KDE
+
+Scatter plots
+
+Count plots
+
+Correlation heatmaps
+
+Genre comparison charts
+
+Feature-importance charts
+
+Summary dashboard
+
+A consolidated music analytics dashboard was also created to provide a high-level view of key metrics including:
+
+Popularity | Danceability | Energy | Valence | Genre Distribution
+
+The dashboard-style reporting demonstrates the ability to convert detailed analysis into concise, decision-friendly visual summaries.
+
+📐 Statistical Analysis
+
+Pearson correlation analysis was used to investigate relationships between song popularity and audio characteristics.
+
+Rather than relying solely on visual patterns, the analysis considers both:
+
+Correlation coefficient
+
+p-value
+
+This approach helps assess whether observed relationships between variables — such as danceability and popularity — are statistically meaningful within the dataset.
+Machine Learning — Genre Classification
+
+A supervised machine learning model was developed to determine whether a song's genre can be predicted from its audio characteristics.
+
+Model Objective
+
+The classification task predicts one of three major cleaned genre categories:
+
+Hip-Hop
+Latin
+Pop
+Features Used
+
+The model uses the following song characteristics:
+
+Beats Per Minute
+Energy
+Danceability
+Loudness
+Liveness
+Valence
+Song Length
+Acousticness
+Speechiness
+Popularity
+ML Workflow
+
+The machine learning pipeline includes:
+
+Genre cleaning and standardization
+Feature selection
+Removal of Other genre records
+Train/test split
+Stratified sampling to preserve genre proportions
+Random Forest model training
+Genre prediction
+Model evaluation using:
+Accuracy
+Confusion Matrix
+Precision
+Recall
+F1-score
+Feature importance analysis
+🌲 Random Forest Classifier
+
+A Random Forest Classifier with 200 estimators was trained to classify songs based on their audio characteristics.
+
+RandomForestClassifier(
+    n_estimators=200,
+    random_state=42
+)
+
+📊 Model Performance
+
+The model achieved an overall accuracy of 88.89% on the test set.
+
+Metric	Score
+Accuracy	88.89%
+Macro Precision	0.94
+Macro Recall	0.83
+Macro F1-Score	0.86
+Weighted F1-Score	0.88
+Classification Performance
+Genre	Precision	Recall	F1-Score
+Hip-Hop	1.00	1.00	1.00
+Latin	1.00	0.50	0.67
+Pop	0.83	1.00	0.91
+
+The confusion matrix showed that the model correctly classified all Hip-Hop and Pop samples in the test set, while some Latin songs were classified as Pop.
+
+🎯 Feature Importance
+
+Random Forest feature importance was used to identify which audio characteristics contributed most to genre classification.
+
+The feature-importance analysis provides an additional layer of interpretation by showing which characteristics were most useful to the model when distinguishing between genres.
+
+Note: Because the dataset is relatively small, the 88.89% accuracy should be interpreted cautiously. The model demonstrates the application of classification techniques and feature analysis, but a larger dataset would provide a more reliable assessment of real-world genre prediction performance.
+
+💡 Key Analytical & Business Skills Demonstrated
+
+This project demonstrates practical skills relevant to Data Analyst, BI Analyst, and Junior Data Scientist roles, including:
+
+Data cleaning and preprocessing
+Data quality checks
+Exploratory Data Analysis
+Statistical analysis
+Feature engineering
+Group-by and aggregation analysis
+Correlation analysis
+Data visualization
+KPI and metric interpretation
+Pattern and trend identification
+Dashboard-style reporting
+Supervised machine learning
+Classification modeling
+Model evaluation
+Confusion matrix interpretation
+Feature importance analysis
+Communicating data-driven insights
+🛠️ Tools & Technologies
+
+Python | Pandas | NumPy | Matplotlib | Seaborn | SciPy | Scikit-learn | Jupyter Notebook | Kaggle Dataset
